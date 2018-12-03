@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="header">
+  Task Management
+</div>
+<div class="layout">
+  <app-sidebar [list]="tabs" class="sidebar" (tabChange)="changeTab($event)">
+
+  </app-sidebar>
+  <app-test [tab]="active_tab.index" style="display:flex;justify-content: center;align-items: center;">
+
+  </app-test>
+</div>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,28 @@
+<div class="task-layout">
+  <h2>Add Task</h2>
+  <div class="holder">
+    <div class="group">
+      <span>Title</span>
+      <input [(ngModel)]="title" type="text">
+    </div>
+    <div class="group">
+      <span style="margin:-2px;">Due date</span>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="given_date" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="group">
+      <span>Description</span>
+      <textarea  [(ngModel)]="description" name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="group">
+      <span>Assignee</span>
+      <input [(ngModel)]="assignee" type="text">
+    </div>
+    <div class="group" style=" grid-column: 2;margin-top: 15px;">
+      <button (click)="saveIt()">Add</button>
+    </div>
+  </div>
+</div>

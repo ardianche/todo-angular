@@ -1,0 +1,26 @@
+<div class="list-layout" *ngIf="tasks.length > 0">
+  <div class="box" *ngFor="let task of tasks;index as i">
+      <div class="box-container">
+        <span [class.line]="task.done">{{task.title}}</span>
+          <div>
+              <span class="icon" (click)="activity('mark',task)">
+                  <mat-icon >check</mat-icon>
+                </span>
+                <span class="icon" (click)="activity('remove',task)">
+                    <mat-icon >remove</mat-icon>
+                  </span>
+          </div>
+      </div>
+      <div class="description">
+        <span>
+            {{task.description}}
+        </span>
+      </div>
+      <div class="description">
+        <span style="color:black;font-style: italic;">{{task.date | date}}</span>
+      </div>
+  </div>
+</div>
+<div *ngIf="tasks.length === 0">
+    <h2>No tasks yet!</h2>
+</div>

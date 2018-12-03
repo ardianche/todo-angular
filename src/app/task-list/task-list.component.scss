@@ -1,0 +1,47 @@
+.list-layout{
+    display:flex;
+    flex-direction: column;
+    padding:20px;
+    border: 1px solid lightgray;
+    border-radius:4px;
+    min-height:300px;
+    overflow-y:scroll;
+    .box{
+        min-width: 60vw;
+        padding: 20px;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        box-shadow: 0px 0px 10px 2px lightgrey;
+        margin-bottom: 10px;
+        .box-container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+}
+
+.checked{
+    background-color: #3b3d3d;
+    color: white;
+}
+
+.line{
+    text-decoration: line-through;
+}
+.icon:hover{
+    transform:scale(1.08);
+    cursor:pointer;
+}
+
+.icon:hover > mat-icon{
+    transform:scale(1.08);
+    color:red;
+    fill:red;
+    stroke:red;
+}
+
+.description {
+    font-weight:300;
+    color:lightgray;
+}
